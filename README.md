@@ -67,7 +67,7 @@ This extension relies on a server component to securely process API requests. To
    OPENAI_API_KEY=your-api-key-here
    ```
 
-5. Deploy to your preferred serverless platform (Vercel, Netlify, etc.)
+5. Deploy to serverless platform (Vercel, Netlify, etc.)
 
 6. Update the proxy URL in the extension's settings to point to your deployed server
 
@@ -120,14 +120,6 @@ This extension:
 - Does not collect any personal data
 - Does not store your images or generated captions anywhere except locally
 
-## License
-
-MIT License - See LICENSE file for details
-
-## Credits
-
-- OpenAI for the GPT-4 Vision API
-- [Your Name/Organization]
 
 ## Support
 
