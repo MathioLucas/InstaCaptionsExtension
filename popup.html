@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Caption Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Instagram Caption Generator</h1>
+    
+    <div class="settings-section">
+      <h2>Settings</h2>
+      
+      <div class="setting-group">
+        <label for="api-key">OpenAI API Key (optional):</label>
+        <input type="password" id="api-key" placeholder="sk-...">
+        <p class="help-text">Only needed if not using our service proxy</p>
+      </div>
+      
+      <div class="setting-group">
+        <label for="use-proxy">
+          <input type="checkbox" id="use-proxy" checked>
+          Use service proxy (recommended)
+        </label>
+        <p class="help-text">Uses a secure proxy to make API calls</p>
+      </div>
+      
+      <div class="setting-group">
+        <label for="default-tone">Default Tone:</label>
+        <select id="default-tone">
+          <option value="professional">Professional</option>
+          <option value="casual" selected>Casual</option>
+          <option value="funny">Funny</option>
+          <option value="inspirational">Inspirational</option>
+          <option value="promotional">Promotional</option>
+        </select>
+      </div>
+      
+      <div class="setting-group">
+        <label for="caption-length">Default Caption Length:</label>
+        <select id="caption-length">
+          <option value="short">Short</option>
+          <option value="medium" selected>Medium</option>
+          <option value="long">Long</option>
+        </select>
+      </div>
+      
+      <div class="setting-group">
+        <label for="hashtag-count">Default Hashtag Count:</label>
+        <input type="number" id="hashtag-count" min="0" max="30" value="5">
+      </div>
+      
+      <button id="save-settings" class="primary-button">Save Settings</button>
+    </div>
+    
+    <div class="info-section">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Go to Instagram and start creating a post</li>
+        <li>Upload your image</li>
+        <li>Click the "Generate Caption" button that appears</li>
+        <li>Adjust settings as needed</li>
+        <li>Enjoy your AI-generated caption!</li>
+      </ol>
+    </div>
+    
+    <div class="footer">
+      <p>Made with ❤️ by Mathias</p>
+      <button id="view-privacy" class="text-button">Privacy Policy</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

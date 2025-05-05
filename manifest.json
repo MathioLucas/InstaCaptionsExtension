@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Caption Generator",
+  "version": "1.0.0",
+  "description": "AI-powered caption and hashtag generator for Instagram creators",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://*.instagram.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["assets/styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["https://*.instagram.com/*"]
+    }
+  ]
+}
